@@ -1,0 +1,521 @@
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f0e9, #f0f7f4);
+    color: #172033;
+}
+
+.tasks-container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+/* Header */
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+    .tasks-header h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .tasks-header p {
+        color: #718096;
+        font-size: 14px;
+    }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #008563;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 133, 99, 0.15);
+}
+
+    .btn-primary:hover {
+        background-color: #006f52;
+    }
+
+.btn-outline {
+    background-color: white;
+    color: #334155;
+    border: 1px solid #dbe4e8;
+}
+
+/* Empty State */
+.empty-state {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ffffff;
+    border-radius: 16px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(35, 70, 60, 0.06);
+}
+
+.empty-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background-color: #e9fbf3;
+    color: #008563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.empty-state p {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 360px;
+}
+
+/* Task Card */
+.task-card {
+    background-color: #ffffff;
+    border: 1px solid #e2ebe7;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(35, 70, 60, 0.04);
+}
+
+    .task-card h3 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+.task-description {
+    color: #718096;
+    line-height: 1.6;
+}
+
+/* Search */
+.task-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #dbe4e8;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 24px;
+    outline: none;
+}
+
+    .task-search:focus {
+        border-color: #008563;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tasks-container {
+        width: 90%;
+        margin: 35px auto;
+    }
+
+    .tasks-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+        .tasks-header h1 {
+            font-size: 26px;
+        }
+
+    .btn {
+        padding: 10px 13px;
+    }
+}
+
+/* General */
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #e0f0e9, #edf5f1);
+    color: #172033;
+    font-family: Arial, sans-serif;
+}
+
+.home-container,
+.tasks-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 70px auto;
+}
+
+/* Home */
+.home-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f9fcfa;
+    border: 1px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(30, 70, 55, 0.08);
+}
+
+.home-content {
+    padding: 55px 40px;
+}
+
+.home-label,
+.section-label {
+    color: #008563;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home-content h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+    .home-content h1 span {
+        color: #008563;
+    }
+
+.home-content p,
+.tasks-subtitle {
+    color: #718096;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #008563;
+    color: white;
+    border: 1px solid #008563;
+}
+
+    .btn-primary:hover {
+        background: #006e51;
+        color: white;
+    }
+
+.btn-secondary {
+    background: white;
+    color: #263548;
+    border: 1px solid #dbe4e8;
+}
+
+/* Home illustration */
+.home-illustration {
+    background: #d9eee5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.demo-task {
+    background: white;
+    padding: 25px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(20, 70, 50, 0.08);
+    transform: rotate(-3deg);
+}
+
+    .demo-task h3 {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+.demo-item {
+    border: 1px solid #e3ece8;
+    border-radius: 8px;
+    padding: 14px 10px;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+    .demo-item:first-letter {
+        color: #008563;
+    }
+
+    .demo-item.completed {
+        color: #9aa6b2;
+        text-decoration: line-through;
+    }
+
+/* Tasks */
+.tasks-container {
+    max-width: 900px;
+    margin-top: 45px;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+    .tasks-header h1 {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+.empty-state {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid white;
+    border-radius: 15px;
+    min-height: 250px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(30, 70, 55, 0.05);
+}
+
+.empty-icon {
+    background: #e6faf1;
+    color: #008563;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.empty-state p {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.task-card {
+    background: white;
+    border: 1px solid #e1ebe6;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(30, 70, 55, 0.04);
+}
+
+    .task-card h3 {
+        margin-top: 0;
+    }
+
+/* Responsive */
+@media (max-width: 700px) {
+    .home-card {
+        grid-template-columns: 1fr;
+    }
+
+    .home-content {
+        padding: 35px 25px;
+    }
+
+        .home-content h1 {
+            font-size: 34px;
+        }
+
+    .home-illustration {
+        min-height: 220px;
+    }
+
+    .tasks-header {
+        align-items: flex-start;
+    }
+
+    .home-container,
+    .tasks-container {
+        width: 92%;
+        margin: 30px auto;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+.form-control {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #dbe4e8;
+    border-radius: 8px;
+    background: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: #008563;
+        box-shadow: 0 0 0 3px rgba(0, 133, 99, 0.1);
+    }
+
+textarea.form-control {
+    resize: vertical;
+}
+
+<div style="display: flex; gap: 10px; margin-top: 15px;" >
+
+<a asp-controller="Tasks"
+asp-action="Edit"
+asp-route-id="@task.Id"
+class="btn-secondary" >
+Edit
+</a >
+
+<form asp-controller="Tasks"
+asp-action="Delete"
+asp-route-id="@task.Id"
+method="post"
+onsubmit="return confirm('Are you sure you want to delete this task?');" >
+
+<button type="submit" class="btn-primary"
+style="background: #dc3545; border-color: #dc3545;" >
+Delete
+</button >
+</form >
+
+</div >
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+    body > .container {
+        flex: 1 0 auto;
+    }
+
+footer.footer {
+    position: static;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.deadline-warning {
+    color: #dc3545;
+    font-weight: 700;
+    background-color: #ffe5e5;
+    padding: 5px 10px;
+    border-radius: 6px;
+    animation: deadline-pulse 1s infinite alternate;
+}
+
+@keyframes deadline-pulse {
+    from {
+        background-color: #ffe5e5;
+    }
+
+    to {
+        background-color: #ffb3b3;
+    }
+}
+
+<div class="mb-3" >
+<span class="fw-bold" > Deadline:</span >
+
+<span class="@(isDueTomorrow || isOverdue ? "deadline-warning" : "")" >
+@task.Deadline.ToString("dd MMM yyyy hh:mm tt")
+</span >
+
+@if (isDueTomorrow) {
+    <span class="badge bg-danger ms-2">Due Tomorrow !</span>
+}
+
+else if (isOverdue) {
+    <span class="badge bg-secondary ms-2">Overdue</span>
+}
+
+</div >
+
+.deadline-warning {
+    display: inline-block;
+    color: #dc3545;
+    font-weight: 700;
+    background-color: #ffe5e5;
+    border: 1px solid #ffb3b3;
+    padding: 6px 10px;
+    border-radius: 8px;
+    animation: deadline-pulse 1s infinite alternate;
+}
+
+@keyframes deadline-pulse {
+    from {
+        background-color: #ffe5e5;
+        border-color: #ffb3b3;
+    }
+
+    to {
+        background-color: #ffc2c2;
+        border-color: #dc3545;
+    }
+}
+

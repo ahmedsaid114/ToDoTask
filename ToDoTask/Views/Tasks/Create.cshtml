@@ -1,0 +1,120 @@
+﻿
+@model ToDoTask.Models.TaskItem
+
+@{
+    ViewData["Title"] = "Create New Task";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+
+            <div class="card shadow border-0 rounded-4">
+
+                <div class="card-header bg-primary text-white p-4 rounded-top-4">
+                    <h2 class="mb-1">Create New Task</h2>
+                    <p class="mb-0">Add a new task to your task list.</p>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <form asp-controller="Tasks"
+                          asp-action="Create"
+                          method="post"
+                          enctype="multipart/form-data">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="All"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Title"
+                                   class="form-label fw-bold">
+                                Task Title
+                            </label>
+
+                            <input asp-for="Title"
+                                   class="form-control form-control-lg"
+                                   placeholder="Enter task title" />
+
+                            <span asp-validation-for="Title"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description"
+                                   class="form-label fw-bold">
+                                Description
+                            </label>
+
+                            <textarea asp-for="Description"
+                                      class="form-control"
+                                      rows="5"
+                                      placeholder="Enter task description"></textarea>
+
+                            <span asp-validation-for="Description"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        
+                        <div class="mb-3">
+                            <label asp-for="Deadline" class="form-label fw-bold">
+                                Deadline (Date & Time)
+                            </label>
+
+                            <input asp-for="Deadline"
+                                   type="datetime-local"
+                                   asp-format="{0:yyyy-MM-ddTHH:mm}"
+                                   class="form-control" />
+
+                            <span asp-validation-for="Deadline" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="mb-4">
+                            <label for="attachmentFile"
+                                   class="form-label fw-bold">
+                                Attachment
+                            </label>
+
+                            <input type="file"
+                                   id="attachmentFile"
+                                   name="attachmentFile"
+                                   class="form-control" />
+
+                            <div class="form-text">
+                                Upload a file if needed. Maximum size: 10 MB.
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg">
+                                Create Task
+                            </button>
+
+                            <a asp-controller="Tasks"
+                               asp-action="Index"
+                               class="btn btn-outline-secondary btn-lg">
+                                Back to Tasks
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

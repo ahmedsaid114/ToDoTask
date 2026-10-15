@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<div class="home-container">
+    <div class="home-card">
+
+        <div class="home-content">
+            <span class="home-label">SIMPLE, FOCUSED PLANNING</span>
+
+            <h1>
+                Turn intentions<br />
+                into <span>done.</span>
+            </h1>
+
+            <p>
+                A calm space to collect your work, set deadlines,
+                and keep momentum without the noise.
+            </p>
+
+            <div class="home-buttons">
+                <a asp-controller="Tasks"
+                   asp-action="Index"
+                   class="btn-primary">
+                    View your tasks →
+                </a>
+
+                <a asp-controller="Tasks"
+                   asp-action="Create"
+                   class="btn-secondary">
+                    + Add a task
+                </a>
+            </div>
+        </div>
+
+        <div class="home-illustration">
+            <div class="demo-task">
+                <h3>☑ Your next steps</h3>
+
+                <div class="demo-item">✓ Plan the next move</div>
+                <div class="demo-item completed">✓ Make time for deep work</div>
+                <div class="demo-item">✓ Celebrate the progress</div>
+            </div>
+        </div>
+
+    </div>
+</div>
